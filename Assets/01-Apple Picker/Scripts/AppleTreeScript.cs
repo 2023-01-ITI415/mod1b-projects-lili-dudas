@@ -17,6 +17,13 @@ public class AppleTreeScript : MonoBehaviour
     void Start()
     {
         //Dropping apples every second
+        Invoke( "DropApple", 2f);
+    }
+
+    void DropApple() {
+        GameObject apple = Instance<GameObject>(applePrefab);
+        apple.transform.position = transform.position;
+        Invoke("DropApple", appleDropDelay)
     }
 
     // Update is called once per frame
@@ -32,6 +39,14 @@ public class AppleTreeScript : MonoBehaviour
         }
         else if (pos.x > leftAndRightEdge){
             speed = -Mathf.Abs(speed);//Move left
+        }
+    }
+
+    void FixedUpdate()
+    {
+        //changing directions randomly
+        if (Random.value < chanceTOChangeDirections) {
+            speed *= -1; //change direction
         }
     }
 }
