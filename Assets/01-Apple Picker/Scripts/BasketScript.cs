@@ -15,8 +15,8 @@ public class BasketScript : MonoBehaviour
         this.transform.position = pos;
     }
 
-    void OnCollisionEnter( Collision coll){
-        GameObject collidedWith = coll.gameObject;
+    void OnCollisionEnter( Collision collision){
+        GameObject collidedWith = collision.gameObject;
         if(collidedWith.CompareTag("Apple")){
             Destroy(collidedWith);
         }

@@ -11,7 +11,7 @@ public class AppleTreeScript : MonoBehaviour
     //Distance where AppleTree turns around 
     public float leftAndRightEdge = 20f;
     //Rate at which Apples will be instantiate 
-    public float secondsBetweenAppleDrop
+    public float secondsBetweenAppleDrop;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +21,9 @@ public class AppleTreeScript : MonoBehaviour
     }
 
     void DropApple() {
-        GameObject apple = Instance<GameObject>(applePrefab);
+        GameObject apple = Instantiate<GameObject>(applePrefab);
         apple.transform.position = transform.position;
-        Invoke("DropApple", appleDropDelay)
+        Invoke("DropApple", secondsBetweenAppleDrop);
     }
 
     // Update is called once per frame
@@ -45,8 +45,8 @@ public class AppleTreeScript : MonoBehaviour
     void FixedUpdate()
     {
         //changing directions randomly
-        if (Random.value < chanceTOChangeDirections) {
-            speed *= -1; //change direction
-        }
+        //if (Random.value < chanceToChangeDirections) {
+           // speed *= -1; //change direction
+        //}
     }
 }
