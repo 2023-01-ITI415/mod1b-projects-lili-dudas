@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BasketScript : MonoBehaviour
 {
+    public ScoreCounter scoreCounter;
+    void Start(){
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreCounter = scoreGO.GetComponent<Text>();
+        scoreCounter.text ="0";
+    }
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +26,8 @@ public class BasketScript : MonoBehaviour
         GameObject collidedWith = collision.gameObject;
         if(collidedWith.CompareTag("Apple")){
             Destroy(collidedWith);
+            scoreCounter.score += 100;
         }
+       
     }
 }
