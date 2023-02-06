@@ -27,6 +27,7 @@ public class BasketScript : MonoBehaviour
         if(collidedWith.CompareTag("Apple")){
             Destroy(collidedWith);
             scoreCounter.score += 100;
+            HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
         }
        
     }
