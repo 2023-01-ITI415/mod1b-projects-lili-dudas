@@ -14,7 +14,7 @@ public class HighScore : MonoBehaviour
     {
         _UI_TEXT = GetComponent<Text>();
         if (PlayerPrefs.HasKey("HighScore")){
-            SCORE= PlayerPrefs.GetInt("HighScore");
+            SCORE = PlayerPrefs.GetInt("HighScore");
         }
         PlayerPrefs.SetInt("HighScore", SCORE);
     }
@@ -34,6 +34,7 @@ public class HighScore : MonoBehaviour
         if (scoreToTry <= SCORE) return;
         SCORE = scoreToTry;
     }
+
     [Tooltip("Check this box to reset the HighScore in PlayerPrefs")]
     public bool resetHighScoreNow = false;
 
