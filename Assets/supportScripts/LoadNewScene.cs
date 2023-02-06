@@ -8,7 +8,7 @@ public class LoadNewScene : MonoBehaviour
 
     public void LoadScene1()
     {
-        SceneManager.LoadScene("ApplePicker_LD");
+        SceneManager.LoadScene("Main-ApplePicker");
     }
 
     public void LoadScene2()
