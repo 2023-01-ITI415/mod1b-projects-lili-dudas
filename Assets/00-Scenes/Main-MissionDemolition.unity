@@ -822,10 +822,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1844619970072416038, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844619970072416038, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844619970072416038, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844619970072416038, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844619970072416038, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844619970072416038, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2073208614357412198, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
       propertyPath: m_Name
       value: Castle
       objectReference: {fileID: 0}
+    - target: {fileID: 2792552155738252194, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c13282a8d8d584fec851175ba3624fa2, type: 2}
     - target: {fileID: 2944339793049491739, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
       propertyPath: m_RootOrder
       value: 5
