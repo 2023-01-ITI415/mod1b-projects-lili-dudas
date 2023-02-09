@@ -219,6 +219,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c91648aa8b345f0862403ff06dc808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloudSprites:
+  - {fileID: 21300000, guid: 836deea52461f435ea72f5dcb31f1291, type: 3}
+  - {fileID: 21300000, guid: d5a2e889065f049d9ac9be3e93fd13a3, type: 3}
+  - {fileID: 21300000, guid: 6311b30bd3ef5453e9a60de06899db4c, type: 3}
+  - {fileID: 21300000, guid: 96e56f4fcfe4d417f8ff4d59b24b162a, type: 3}
+  - {fileID: 21300000, guid: acc5f0fd7462e4c4894ab0ad7ede1b6f, type: 3}
+  numClouds: 40
+  minPos: {x: -20, y: -5, z: -5}
+  maxPos: {x: 300, y: 40, z: 5}
+  scaleRange: {x: 1, y: 4}
 --- !u!4 &157750989
 Transform:
   m_ObjectHideFlags: 0
