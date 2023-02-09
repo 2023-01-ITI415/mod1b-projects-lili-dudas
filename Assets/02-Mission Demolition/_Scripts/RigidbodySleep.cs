@@ -7,6 +7,7 @@ using UnityEngine;
 public class RigidbodySleep : MonoBehaviour
 {
     private int sleepCountdown = 4; 
+    private Rigidbody rigid;
 
     // Start is called before the first frame update
     void Awake()
