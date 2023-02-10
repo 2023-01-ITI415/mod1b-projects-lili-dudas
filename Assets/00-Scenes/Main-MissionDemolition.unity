@@ -573,6 +573,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25ca7a01833041deb4fa87b384d5845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uitLevel: {fileID: 313426550}
+  uitShots: {fileID: 1475982606}
+  castlePos: {x: 50, y: -9.5, z: 0}
+  castles:
+  - {fileID: 2073208614357412198, guid: b293df47a4d2c4855ae58f266647ae0b, type: 3}
+  - {fileID: 2073208614357412198, guid: 74bdc35f7526143b3a375d732ce65ae2, type: 3}
+  - {fileID: 2073208614357412198, guid: bbe696fbca0b4490fa0a51522fabfb66, type: 3}
+  - {fileID: 2073208614357412198, guid: 55b05683b938d460581d308d9419aefd, type: 3}
+  level: 0
+  levelMax: 0
+  shotsTaken: 0
+  castle: {fileID: 0}
+  mode: 0
+  showing: Show Slingshot
 --- !u!1 &937106403
 GameObject:
   m_ObjectHideFlags: 0

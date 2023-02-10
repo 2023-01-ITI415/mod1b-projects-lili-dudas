@@ -42,15 +42,50 @@ public class MissionDemolition : MonoBehaviour
         if (castle != null){
             Destroy(castle);
         }
-        Projectile.DESTROY_PROJECTILES(); //method not yet written
+        Projectile. DESTROY_PROJECTILES(); //method not yet written
 
         //instantiate new castle
-        
+         castle = Instantiate<GameObject>(castles[level]);
+        castle.transform.position = castlePos;
+
+        //reset the goal 
+        Goal.goalMet = false;
+        UpdateGUI();
+        mode = GameMode.playing;
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateGUI()
     {
-        
+        //show the data in the GUITexts
+        uitLevel.text = "Level: " + (level+1) + " of " + levelMax;
+        uitShots.text = "Shots Taken: " + shotsTaken;
+    }
+
+    void Update() {
+        UpdateGUI();
+        //check for level end
+        if ((mode == GameMode.playing)&& Goal.goalMet){
+            //change mode to stop checking for level end
+            mode = GameMode.levelEnd;
+            //start the next level in 2 seconds
+            Invoke("NextLevel", 2f);
+        }
+    }
+
+    void NextLevel(){
+        level++;
+        if (level == levelMax){
+            level = 0;
+            shotsTaken =0;  
+        }
+        StartLevel();
+    }
+
+    static public void SHOT_FIRED(){
+        S.shotsTaken++;
+    }
+
+    static public GameObject GET_CASTLE(){
+        return S.castle;
     }
 }
