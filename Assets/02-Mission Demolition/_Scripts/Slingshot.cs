@@ -17,7 +17,7 @@ public class Slingshot : MonoBehaviour
     public bool aimingMode;
 
     void Awake(){
-        Transform launchPointTrans = transform.Find("LauchPoint");
+        Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
@@ -50,7 +50,7 @@ public class Slingshot : MonoBehaviour
        if (!aimingMode) return;
        //get the current mouse position in 2D screen coordinates
        Vector3 mousePos2D = Input.mousePosition;
-       mousePos2D.z = Camera.main.transform.position.z;
+       mousePos2D.z = -Camera.main.transform.position.z;
        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
        //find the delta from launchPos to mousePos3D
        Vector3 mouseDelta = mousePos3D - launchPos;
