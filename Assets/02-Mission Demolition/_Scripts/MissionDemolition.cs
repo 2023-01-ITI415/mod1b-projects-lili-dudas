@@ -52,6 +52,8 @@ public class MissionDemolition : MonoBehaviour
         Goal.goalMet = false;
         UpdateGUI();
         mode = GameMode.playing;
+        //zoom out to show both
+        FollowCam.SWITCH_VIEW(FollowCam.eView.both);
     }
 
     void UpdateGUI()
@@ -67,6 +69,8 @@ public class MissionDemolition : MonoBehaviour
         if ((mode == GameMode.playing)&& Goal.goalMet){
             //change mode to stop checking for level end
             mode = GameMode.levelEnd;
+            //zoom out to show both
+            FollowCam.SWITCH_VIEW(FollowCam.eView.both);
             //start the next level in 2 seconds
             Invoke("NextLevel", 2f);
         }
