@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class MazePlayer : MonoBehaviour
@@ -19,9 +20,9 @@ public class MazePlayer : MonoBehaviour
     void Start()
     {
         rb =GetComponent<Rigidbody>();
-        count = 0;
-        SetCountText ();
-        winTextObject.SetActive(false);
+        //count = 0;
+        //SetCountText ();
+        //winTextObject.SetActive(false);
     }
     
     void OnMove(InputValue movementValue)
@@ -46,19 +47,19 @@ public class MazePlayer : MonoBehaviour
             other.gameObject.SetActive(false);
             // Add one to the score variable 'count'
 			count = count + 1;
-            SetCountText ();
+            //SetCountText ();
         }
     }
 
-     void SetCountText()
-	{
-		countText.text = "Count: " + count.ToString();
+    //  void SetCountText()
+	// {
+	// 	countText.text = "Count: " + count.ToString();
 
-        if (count >= 12) 
-		{
-                    // Set the text value of your 'winText'
-                    winTextObject.SetActive(true);
-		}
+    //     if (count >= 12) 
+	// 	{
+    //                 // Set the text value of your 'winText'
+    //                 winTextObject.SetActive(true);
+	// 	}
 
-	}
+	// }
 }
