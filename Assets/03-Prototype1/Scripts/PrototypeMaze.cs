@@ -49,7 +49,7 @@ public class PrototypeMaze : MonoBehaviour
     {
         //show the data in the GUITexts
         uitLevel.text = "Level: " + (level+1) + " of " + levelMax;
-        uitShots.text = "Shots Taken: " + score;
+        uitShots.text = "Score: " + score;
     }
 
     void NextLevel(){
