@@ -11,7 +11,6 @@ public class MazePlayer : MonoBehaviour
     public GameObject winTextObject;
 
     private Rigidbody rb;
-    private int count;
 
     private float movementX;
     private float movementY;
@@ -20,8 +19,6 @@ public class MazePlayer : MonoBehaviour
     void Start()
     {
         rb =GetComponent<Rigidbody>();
-        //count = 0;
-        //SetCountText ();
         //winTextObject.SetActive(false);
     }
     
@@ -42,24 +39,10 @@ public class MazePlayer : MonoBehaviour
     
      void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PickUp"))
+        if (other.gameObject.CompareTag("Coin Parent"))
         {
             other.gameObject.SetActive(false);
-            // Add one to the score variable 'count'
-			count = count + 1;
-            //SetCountText ();
         }
     }
 
-    //  void SetCountText()
-	// {
-	// 	countText.text = "Count: " + count.ToString();
-
-    //     if (count >= 12) 
-	// 	{
-    //                 // Set the text value of your 'winText'
-    //                 winTextObject.SetActive(true);
-	// 	}
-
-	// }
 }
