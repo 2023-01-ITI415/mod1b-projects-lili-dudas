@@ -19,6 +19,7 @@ public class PrototypeMaze : MonoBehaviour
     public int score;
     public GameObject maze;
     public GameMode mode = GameMode.idle;
+    public MainCameraController MCC;
    
     void Start()
     {
@@ -26,7 +27,8 @@ public class PrototypeMaze : MonoBehaviour
         level = 0;
         score = 0;
         levelMax = mazes.Length;
-        StartLevel();
+        MCC = Camera.main.GetComponent<MainCameraController>();
+        StartLevel(); 
     }
 
     void StartLevel(){
@@ -38,6 +40,9 @@ public class PrototypeMaze : MonoBehaviour
         //instantiate new castle
         maze = Instantiate<GameObject>(mazes[level]);
         maze.transform.position = mazePos;
+
+        //camera controls
+        MCC.SetPlayer();
 
         //reset the goal 
         Target.targetMet = false;

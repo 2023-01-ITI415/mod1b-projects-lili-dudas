@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uitLevel: {fileID: 607322232}
-  uitShots: {fileID: 608496537}
+  uitScore: {fileID: 608496537}
   mazes:
   - {fileID: 6498791082594026283, guid: e60c3f432c68d414ea185946509eec9d, type: 3}
   - {fileID: 6498791082594026283, guid: 18bd743279a684f8ba363f4eee91a057, type: 3}
