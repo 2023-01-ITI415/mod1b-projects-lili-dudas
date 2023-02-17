@@ -17,5 +17,10 @@ public class Target : MonoBehaviour
             Color c = mat.color;
             c.a = 0.75f;
         }
+
+        if (other.gameObject.CompareTag("Target"))
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 }

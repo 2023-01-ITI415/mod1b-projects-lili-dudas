@@ -9,7 +9,7 @@ public class PrototypeMaze : MonoBehaviour
 
     [Header("Inscribed")]
     public Text uitLevel; //UIText_Level Text
-    public Text uitShots; //UIText_Shots Text
+    public Text uitScore; //UIText_Shots Text
     public GameObject[] mazes; //an array of mazes
     public Vector3 mazePos; //The place to put mazes
 
@@ -49,14 +49,14 @@ public class PrototypeMaze : MonoBehaviour
     {
         //show the data in the GUITexts
         uitLevel.text = "Level: " + (level+1) + " of " + levelMax;
-        uitShots.text = "Score: " + score;
+        uitScore.text = "Score: " + score;
     }
 
     void NextLevel(){
         level++;
         if (level == levelMax){
             level = 0;
-            score =0;  
+            score = 0;
         }
         StartLevel();
     }

@@ -39,7 +39,7 @@ public class MazePlayer : MonoBehaviour
     
      void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Coin Parent"))
+        if (other.gameObject.CompareTag("Coin"))
         {
             other.gameObject.SetActive(false);
         }
