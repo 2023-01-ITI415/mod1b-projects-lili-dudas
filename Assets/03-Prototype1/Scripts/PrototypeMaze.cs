@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Gamemode {
+    Idle,
+    Playing,
+    LevelEnd
+}
+
 public class PrototypeMaze : MonoBehaviour
 {
     static private PrototypeMaze S; //private Singleton
@@ -18,8 +24,9 @@ public class PrototypeMaze : MonoBehaviour
     public int levelMax; //number of levels
     public int score;
     public GameObject maze;
-    public GameMode mode = GameMode.idle;
+    public Gamemode mode = Gamemode.Idle;
     public MainCameraController MCC;
+    public Target target;
    
     void Start()
     {
@@ -47,7 +54,7 @@ public class PrototypeMaze : MonoBehaviour
         //reset the goal 
         Target.targetMet = false;
         UpdateGUI();
-        mode = GameMode.playing;
+        mode = Gamemode.Playing;
     }
 
     void UpdateGUI()
@@ -71,12 +78,13 @@ public class PrototypeMaze : MonoBehaviour
         UpdateGUI();
         
         //check for level end
-        if ((mode == GameMode.playing)&& Target.targetMet){
+        if ((mode == Gamemode.Playing)&& Target.targetMet){
             //change mode to stop checking for level end
-            mode = GameMode.levelEnd;
+            mode = Gamemode.LevelEnd;
             //start the next level in 2 seconds
             Invoke("NextLevel", 2f);
         }
+        
     }
 
     public void SCORE_CHANGE(){

@@ -502,6 +502,8 @@ MonoBehaviour:
   score: 0
   maze: {fileID: 0}
   mode: 0
+  MCC: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0

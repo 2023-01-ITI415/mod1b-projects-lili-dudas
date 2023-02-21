@@ -42,7 +42,7 @@ public class MissionDemolition : MonoBehaviour
         if (castle != null){
             Destroy(castle);
         }
-        Projectile. DESTROY_PROJECTILES(); //method not yet written
+        Projectile. DESTROY_PROJECTILES(); 
 
         //instantiate new castle
          castle = Instantiate<GameObject>(castles[level]);

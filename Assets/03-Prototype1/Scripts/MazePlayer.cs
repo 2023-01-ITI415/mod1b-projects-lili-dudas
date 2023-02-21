@@ -47,6 +47,7 @@ public class MazePlayer : MonoBehaviour
             pm = FindObjectOfType<PrototypeMaze>();
             pm.SCORE_CHANGE();
         }
+        
     }
 
 }

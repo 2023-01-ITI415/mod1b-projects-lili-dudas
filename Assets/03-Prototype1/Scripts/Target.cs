@@ -13,14 +13,6 @@ public class Target : MonoBehaviour
         if(plyr != null){
             //if so, get targetMet to  true
             Target.targetMet = true;
-            Material mat = GetComponent<Renderer>().material;
-            Color c = mat.color;
-            c.a = 0.75f;
-        }
-
-        if (other.gameObject.CompareTag("Target"))
-        {
-            other.gameObject.SetActive(false);
         }
     }
 }
