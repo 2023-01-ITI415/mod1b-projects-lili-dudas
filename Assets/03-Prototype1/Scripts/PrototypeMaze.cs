@@ -18,6 +18,8 @@ public class PrototypeMaze : MonoBehaviour
     public Text uitScore; //UIText_Shots Text
     public GameObject[] mazes; //an array of mazes
     public Vector3 mazePos; //The place to put mazes
+    public Vector3 playerPos; //The place to put player
+    public GameObject player;
 
     [Header("Dynamic")]
     public int level; //current level
@@ -26,7 +28,7 @@ public class PrototypeMaze : MonoBehaviour
     public GameObject maze;
     public Gamemode mode = Gamemode.Idle;
     public MainCameraController MCC;
-    public Target target;
+    //public Target target;
    
     void Start()
     {
@@ -35,6 +37,11 @@ public class PrototypeMaze : MonoBehaviour
         score = 0;
         levelMax = mazes.Length;
         MCC = Camera.main.GetComponent<MainCameraController>();
+        
+        //instantiate new player
+        player = Instantiate<GameObject>(player);
+        player.transform.position = playerPos;
+        
         StartLevel(); 
     }
 

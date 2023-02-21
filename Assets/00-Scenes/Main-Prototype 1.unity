@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37419c9733f14254b171ada5374f5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8231625884110654122, guid: bac15626c303c45b9b07b4194c49fb2e, type: 3}
+  PLAYER: {fileID: 8231625884110654122, guid: bac15626c303c45b9b07b4194c49fb2e, type: 3}
 --- !u!114 &792234110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,13 +497,14 @@ MonoBehaviour:
   - {fileID: 6498791082594026283, guid: e60c3f432c68d414ea185946509eec9d, type: 3}
   - {fileID: 6498791082594026283, guid: 18bd743279a684f8ba363f4eee91a057, type: 3}
   mazePos: {x: 0, y: 0, z: 0}
+  playerPos: {x: -8.75, y: 0.5, z: -6}
+  player: {fileID: 8231625884110654122, guid: bac15626c303c45b9b07b4194c49fb2e, type: 3}
   level: 0
   levelMax: 0
   score: 0
   maze: {fileID: 0}
   mode: 0
   MCC: {fileID: 0}
-  target: {fileID: 0}
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0

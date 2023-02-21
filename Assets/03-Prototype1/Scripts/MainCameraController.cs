@@ -5,19 +5,20 @@ using UnityEngine;
 
 public class MainCameraController : MonoBehaviour
 {
-    public GameObject player;
-
     private Vector3 offset;
+
+    [Header("Inscribed")]
+    public GameObject PLAYER;
 
     public void SetPlayer()
     {
-        player = GameObject.Find("Player");
+        PLAYER = GameObject.Find("Player(Clone)");
         offset = new Vector3 (0,5,-5);
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = PLAYER.transform.position + offset;
     }
 }
