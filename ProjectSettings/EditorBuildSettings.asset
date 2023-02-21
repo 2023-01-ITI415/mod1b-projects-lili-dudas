@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00-Scenes/SceneMain.unity
     guid: afc5006038216427399d86bb793f42d6
-  - enabled: 1
-    path: Assets/00-Scenes/Main-ApplePicker.unity
+  - enabled: 0
+    path: Assets/00-Scenes/Main.unity
     guid: a76078966e5564d698c1ed755489041f
   - enabled: 1
     path: Assets/00-Scenes/Main-MissionDemolition.unity
@@ -17,4 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00-Scenes/Main-Prototype 1.unity
     guid: 84930580229bb4f138179e160aab9b89
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/00-Scenes/Main-ApplePicker.unity
+    guid: 97bbc61e3805b41029475d22b5db2db5
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 713004f27a8ab4f53b007c43d97269f8, type: 2}
