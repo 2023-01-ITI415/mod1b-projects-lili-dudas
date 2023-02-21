@@ -61,13 +61,15 @@ public class PrototypeMaze : MonoBehaviour
         level++;
         if (level == levelMax){
             level = 0;
-            score = 0;
+            //score = 0;
         }
         StartLevel();
     }
 
+
     void Update() {
         UpdateGUI();
+        
         //check for level end
         if ((mode == GameMode.playing)&& Target.targetMet){
             //change mode to stop checking for level end
@@ -75,6 +77,10 @@ public class PrototypeMaze : MonoBehaviour
             //start the next level in 2 seconds
             Invoke("NextLevel", 2f);
         }
+    }
+
+    public void SCORE_CHANGE(){
+        S.score++;
     }
 
     static public GameObject GET_MAZE(){

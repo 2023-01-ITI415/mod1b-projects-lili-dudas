@@ -15,6 +15,8 @@ public class MazePlayer : MonoBehaviour
     private float movementX;
     private float movementY;
 
+    PrototypeMaze pm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,8 @@ public class MazePlayer : MonoBehaviour
         if (other.gameObject.CompareTag("Coin"))
         {
             other.gameObject.SetActive(false);
+            pm = FindObjectOfType<PrototypeMaze>();
+            pm.SCORE_CHANGE();
         }
     }
 
